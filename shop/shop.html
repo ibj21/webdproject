@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Page</title>
+    <link rel="stylesheet" href="shop.css">
+    <script defer src="shop.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <div>
+            <label for="category">Filter:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+            </select>
+        </div>
+        <button onclick="toggleCartView()"> Cart (<span id="cart-count">0</span>)</button>
+    </header>
+    
+    <div id="products" class="product-list"></div>
+    
+    <div id="cart" class="cart" style="display: none;">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+</body>
+</html>
